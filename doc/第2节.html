@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第二节</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="msg">
+    <span v-bind:title="Message">
+        鼠标悬停几秒钟查看此处动态绑定的提示信息！
+    </span>
+</div>
+</body>
+<script>
+    var xm = new Vue({
+        el: '#msg',
+        data: {
+            Message: '页面加载于' + new Date().getSeconds()
+        }
+
+    })
+</script>
+</html>
